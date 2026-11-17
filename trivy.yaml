@@ -1,0 +1,19 @@
+# Trivy scanner configuration (FROJD-CICD-015)
+# https://trivy.dev/latest/docs/references/configuration/config-file/
+ignorefile: .trivyignore.yaml
+
+severity:
+  - CRITICAL
+  - HIGH
+
+scan:
+  scanners:
+    - vuln
+    - misconfig
+    - secret
+  # Installed and built code we don't author. Dependencies are still
+  # scanned through the committed package-lock.json.
+  skip-dirs:
+    - .git
+    - "**/node_modules"
+    - build

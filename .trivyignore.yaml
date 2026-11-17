@@ -1,0 +1,8 @@
+# Approved Trivy exceptions (FROJD-CICD-015). Every entry must have: justification,
+# tracking link (for vulns), approver, and review date.
+# https://trivy.dev/latest/docs/configuration/filtering/#trivyignoreyaml
+#
+# Prefer FIXING the finding (bump the dependency) over ignoring it.
+# Delete an entry once the underlying issue is resolved.
+
+vulnerabilities: []
